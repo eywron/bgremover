@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: bgremover
+    env: docker
+    repo: https://github.com/eywron/bgremover
+    branch: main
+    plan: free
+    dockerfilePath: Dockerfile
+    buildCommand: ""
+    startCommand: ""
+    autoDeploy: true
+    healthCheckPath: /api/health
+    instanceType: starter
+    envVars: []
