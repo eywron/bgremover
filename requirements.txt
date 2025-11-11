@@ -1,0 +1,8 @@
+flask==2.2.5
+rembg==2.1.0
+Pillow==10.0.1
+numpy==1.26.0
+onnxruntime==1.15.1
+
+# Note: rembg will download a small model (u2net) on first run. onnxruntime is used for inference.
+# Depending on Vercel limits you may need to use a lighter setup or external model hosting.

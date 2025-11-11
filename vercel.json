@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/*.py", "use": "@vercel/python" },
+    { "src": "index.html", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/remove_bg.py" },
+    { "src": "/", "dest": "/index.html" }
+  ],
+  "functions": {
+    "api/remove_bg.py": {
+      "runtime": "python3.10",
+      "maxDuration": 10
+    }
+  }
+}
