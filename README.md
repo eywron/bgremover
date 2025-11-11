@@ -37,3 +37,9 @@ Notes
 Restore from previous state
 If you need the previous files (commits before the deletion), create a branch from the earlier commit SHA and push it.
 
+Redeploy trigger
+----------------
+This file was updated to trigger a redeploy on Render. Redeploy timestamp:
+
+2025-11-11T15:XX:00Z
+
