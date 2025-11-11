@@ -7,12 +7,17 @@ WORKDIR /app
 
 # System dependencies needed by Pillow/onnxruntime/rembg
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-       build-essential \
-       libgl1 \
-       libglib2.0-0 \
-       libsndfile1 \
-    && rm -rf /var/lib/apt/lists/*
+     && apt-get install -y --no-install-recommends \
+         build-essential \
+         libgl1 \
+         libglib2.0-0 \
+         libsndfile1 \
+         libgomp1 \
+         libopenblas-dev \
+         libatlas-base-dev \
+         liblapack-dev \
+         libgfortran5 \
+     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt ./
 
